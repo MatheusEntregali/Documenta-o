@@ -1,5 +1,3 @@
-<h1>notificationsViaWhatsappByParcel</h1>
-Descrição do Código
 Este código é uma função do Firebase Cloud Functions que escuta mudanças no Firestore e dispara mensagens de WhatsApp via Twilio quando um novo documento é adicionado na subcoleção /notificationsByWhatsapp/ dentro de /parcels/{parcel}.
 
 Fluxo de Execução
@@ -147,4 +145,4 @@ Resumo
 ⚠️ Os erros estão relacionados a números inválidos, restrições da Meta e experimentos do WhatsApp.
 🚀 Soluções incluem validação do número, uso de templates e registro de erros no Firestore.
 
-Se os erros persistirem, pode ser necessário entrar em contato com o suporte do Twilio para esclarecimentos adicionais. 🚀
+Se os erros persistirem, pode ser necessário entrar em contato com o suporte do Twilio para
