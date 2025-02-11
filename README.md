@@ -105,7 +105,5 @@ Resumo
 
 ⚠️ Os erros estão relacionados a números inválidos, restrições da Meta e experimentos do WhatsApp.
 
-🚀 Soluções incluem validação do número, uso de templates e registro de erros no Firestore.
-
 Se os erros persistirem, pode ser necessário entrar em contato com o suporte do Twilio para esclarecimentos adicionais. 🚀
 
