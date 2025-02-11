@@ -1,3 +1,4 @@
+<h1> notificationsViaWhatsappByParcel </h1>
 Firebase Cloud Function: Notificações via WhatsApp
 Este repositório contém uma função do Firebase Cloud Functions que escuta mudanças no Firestore e dispara mensagens de WhatsApp via Twilio quando um novo documento é adicionado na subcoleção /notificationsByWhatsapp/ dentro de /parcels/{parcel}.
 
@@ -99,41 +100,7 @@ twilioClient.messages
   });
 Se a mensagem for enviada com sucesso, o Twilio retorna um sendWhatsapp.sid, que é salvo no Firestore. Se houver um erro, ele captura e imprime no console.
 
-Problemas e Soluções
-1. Erro 63024 - "Invalid message recipient"
-Causa: O número de telefone do destinatário é inválido.
-
-Solução:
-
-Confirme se o número está no formato internacional correto (whatsapp:+55XXXXXXXXXXX).
-
-Verifique se o número tem conta no WhatsApp (adicione no seu WhatsApp e veja se aparece).
-
-Se o número for fixo, ele não pode receber mensagens do WhatsApp Business.
-
-2. Erro 63049 - "Meta chose not to deliver this WhatsApp marketing message"
-Causa: O Meta bloqueou a entrega da mensagem porque pode ser considerada marketing.
-
-Solução:
-
-Verifique se a mensagem está de acordo com as diretrizes do WhatsApp.
-
-Use templates aprovados pelo WhatsApp em vez de mensagens personalizadas.
-
-Peça para o usuário enviar uma mensagem para você primeiro, pois isso pode permitir o envio.
-
-3. Erro 63032 - "User's number is part of an experiment"
-Causa: O número do destinatário está participando de um experimento do WhatsApp e, por isso, não pode receber mensagens.
-
-Solução:
-
-Tente outro número e veja se o problema persiste.
-
-Espere algumas horas e tente novamente.
-
-Entre em contato com o suporte do Twilio, pois esse erro pode ser temporário.
-
-Melhorias no Código
+<h2> Melhorias no Código</h2>h2> 
 Validar o número antes de enviar a mensagem
 javascript
 Copy
