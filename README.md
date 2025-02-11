@@ -100,7 +100,7 @@ twilioClient.messages
   });
 Se a mensagem for enviada com sucesso, o Twilio retorna um sendWhatsapp.sid, que é salvo no Firestore. Se houver um erro, ele captura e imprime no console.
 
-<h2> Melhorias no Código</h2>h2> 
+<h2> Melhorias no Código</h2> 
 Validar o número antes de enviar a mensagem
 javascript
 Copy
