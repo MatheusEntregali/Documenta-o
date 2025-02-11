@@ -100,30 +100,6 @@ twilioClient.messages
   });
 Se a mensagem for enviada com sucesso, o Twilio retorna um sendWhatsapp.sid, que é salvo no Firestore. Se houver um erro, ele captura e imprime no console.
 
-<h2> Melhorias no Código</h2> 
-Validar o número antes de enviar a mensagem
-javascript
-Copy
-if (!ownersPhones.startsWith("+55") || ownersPhones.length < 13) {
-    console.error("Número inválido:", ownersPhones);
-    return Promise.resolve();
-}
-Isso evita envios desnecessários para números incorretos.
-
-Lidar melhor com erros do Twilio
-javascript
-Copy
-.catch((error) => {
-    console.error("Erro ao enviar mensagem:", error);
-    db.collection("errors").add({
-        error: error.message,
-        phone: ownersPhones,
-        time: admin.firestore.FieldValue.serverTimestamp(),
-    });
-    return error;
-});
-Isso registra os erros no Firestore para facilitar o monitoramento.
-
 Resumo
 📌 Esse código escuta Firestore, pega os dados e envia mensagens via Twilio WhatsApp API.
 
